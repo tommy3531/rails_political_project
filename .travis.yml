@@ -17,8 +17,8 @@ deploy:
   # app: 
   #   master: railspoliticalapp
   #   production: railspoliticalapp-development
-  # on:
-  #   repo: tommy3531/rails_political_project
-  #   branch: development
+  on:
+    repo: tommy3531/rails_political_project
+    branch: development
   run:
     - "rails db:migrate"  
