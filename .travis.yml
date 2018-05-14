@@ -18,6 +18,6 @@ deploy:
     develop: https://dashboard.heroku.com/apps/railspoliticalapp-development
     master: https://dashboard.heroku.com/apps/railspoliticalapp
   on:
-    repo: https://github.com/tommy3531/rails_political_project.git tommy3531/rails_political_project
+    repo: https://github.com/tommy3531/rails_political_project.git
   run:
     - "rails db:migrate"  
