@@ -18,6 +18,7 @@ deploy:
     master: railspoliticalapp
     production: railspoliticalapp-development
   on:
+    repo: tommy3531/rails_political_project/tree/development
     repo: tommy3531/rails_political_project
     all_branches: true
   run:
