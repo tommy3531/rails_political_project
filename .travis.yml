@@ -16,9 +16,19 @@ deploy:
     secure: k8ES+z5l1KyTxMD5To0C2prrJe71HUi90bgLQtcPHBhNRJfHK0hmkHqcWyYOBkljPwUC4NJL7rH0WHsnC6SuKqEGNLdGFcMd68lTme9nrukVAvXl2TTFVUMGra/BNG7Yn/qA6fTIGQq1j9AHUtIRdwzbROOX8kbyBBAiwpHlrWQFvbUY4gFGSbv3GO7bGXk3LQ0H5UIsLYW0ddqm0OoD9hALUmpxqYODC/MuMM9RJkKbLGCnCs1xTpRBaJPTdwvv2k+sN+j1sXB9RCreE0O/v1X8MnUgMX/Sn7rxBdJJwNdvR+pQ5ZWb8JIN6Qa5XoYrcebZK26JrnLIP8HSZpQVOmSy++LOSsr6luj3ng8hsq38ooOZVB/Ej4oJyiKlKQ851SeaPGWq6QsvNPMy2pvS+ROALniS2oYh378wE2S4iQNh+NmnHC3Q/bKH7imMNR/dMHcOqOFTsSVq6aUj2bNELSqo/+YmA9Pp0vQbBQa3dGWrczXYgGjyaTV2f6Fzu3TNPYBlC553yw1VoNragsY6CkSCh3l4cQSmoBJphNwSQLzjrkRwcBQ90JJThSKWXN6XDNI9u/1gQVZ7pd0nKwvwrrieepxaPFlHKaRhpqh2QcHPHlYZfpv+shx2BJFjbkTpe6DaL3L89APJ/CysAcqbxP3XJVSLpeq0TvosNFOJc7w=
   app: 
     master: railspoliticalapp
-    production: railspoliticalapp-development
   on:
     repo: tommy3531/rails_political_project
     all_branches: true
+  run:
+    - "rails db:migrate" 
+deploy:
+  provider: heroku
+  api_key:
+    secure: k8ES+z5l1KyTxMD5To0C2prrJe71HUi90bgLQtcPHBhNRJfHK0hmkHqcWyYOBkljPwUC4NJL7rH0WHsnC6SuKqEGNLdGFcMd68lTme9nrukVAvXl2TTFVUMGra/BNG7Yn/qA6fTIGQq1j9AHUtIRdwzbROOX8kbyBBAiwpHlrWQFvbUY4gFGSbv3GO7bGXk3LQ0H5UIsLYW0ddqm0OoD9hALUmpxqYODC/MuMM9RJkKbLGCnCs1xTpRBaJPTdwvv2k+sN+j1sXB9RCreE0O/v1X8MnUgMX/Sn7rxBdJJwNdvR+pQ5ZWb8JIN6Qa5XoYrcebZK26JrnLIP8HSZpQVOmSy++LOSsr6luj3ng8hsq38ooOZVB/Ej4oJyiKlKQ851SeaPGWq6QsvNPMy2pvS+ROALniS2oYh378wE2S4iQNh+NmnHC3Q/bKH7imMNR/dMHcOqOFTsSVq6aUj2bNELSqo/+YmA9Pp0vQbBQa3dGWrczXYgGjyaTV2f6Fzu3TNPYBlC553yw1VoNragsY6CkSCh3l4cQSmoBJphNwSQLzjrkRwcBQ90JJThSKWXN6XDNI9u/1gQVZ7pd0nKwvwrrieepxaPFlHKaRhpqh2QcHPHlYZfpv+shx2BJFjbkTpe6DaL3L89APJ/CysAcqbxP3XJVSLpeq0TvosNFOJc7w=
+  app: 
+    master: railspoliticalapp-development
+  on:
+    repo: tommy3531/rails_political_project
+    branch: development
   run:
     - "rails db:migrate"  
