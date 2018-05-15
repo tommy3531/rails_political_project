@@ -14,9 +14,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'rails_12factor'
-gem 'bootstrap', '~> 4.1', '>= 4.1.1'
-gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
-gem 'jquery-turbolinks', '~> 2.1'
+gem 'bootstrap', '~> 4.1.1'
+gem 'jquery-rails'
+
 
 
 group :development, :test do
