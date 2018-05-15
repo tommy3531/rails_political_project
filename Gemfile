@@ -16,6 +16,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'rails_12factor'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
+gem 'devise'
 
 
 
