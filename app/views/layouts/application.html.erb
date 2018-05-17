@@ -9,9 +9,8 @@
   </head>
 
   <body>
-    <%= flash.each do |name, message| %>
-      <%= content_tag(div, message, class: "alert alert-info #{name}") %>
-    <% end %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= link_to "Home", root_path %>
 	  <%= link_to "About", about_path %>
 	  <%= link_to "Contact Us", contact_path %>
