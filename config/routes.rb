@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 	root 'pages#home'
 	# root to: "application#hello"
 	# get "/" => "application#hello"
-	# get "/" => "pages#home"
+	get "/" => "pages#home"
 	get "about" => "pages#about"
 	get "contact" => "pages#contactus"
 	get "senator" => "propublica#senator"
