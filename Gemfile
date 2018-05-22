@@ -17,10 +17,9 @@ gem 'rails_12factor'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'devise'
-gem 'openstates'
 gem 'dotenv-rails'
 gem 'faraday'
-gem 'ProPublica', '~> 0.0.6'
+gem 'net-http2'
 
 group :development, :test do
   gem 'rspec-rails'

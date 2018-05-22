@@ -1,0 +1,10 @@
+<h1>Welcome to the senator page</h1>
+
+<tbody>
+	<%= @results.each do |result| %>
+	<tr>
+		<th><%= result["id"] %></th>
+		<th><%= result["first_name"] %></th>
+	</tr>
+	<% end %>
+</tbody>
