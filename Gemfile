@@ -17,8 +17,9 @@ gem 'rails_12factor'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'devise'
-
-
+gem 'dotenv-rails'
+gem 'faraday'
+gem 'net-http2'
 
 group :development, :test do
   gem 'rspec-rails'

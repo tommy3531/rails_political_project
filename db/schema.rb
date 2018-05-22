@@ -10,10 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180515191053) do
+ActiveRecord::Schema.define(version: 20180522033339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "senators", force: :cascade do |t|
+    t.string "user_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "twitter_account"
+    t.string "facebook_account"
+    t.string "youtube_account"
+    t.string "govtrack_id"
+    t.string "cspan_id"
+    t.string "votesmart_id"
+    t.string "icpsr_id"
+    t.string "crp_id"
+    t.string "fec_candidate_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
