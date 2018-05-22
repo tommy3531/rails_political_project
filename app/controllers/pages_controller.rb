@@ -5,8 +5,6 @@ require 'net-http2'
 class PagesController < ApplicationController
 
   def home
-
-
   end
 
 
