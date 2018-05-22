@@ -16,14 +16,38 @@ class PropublicaController < ApplicationController
 	response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
 	  http.request(request)
 	end
+
 	data = JSON.parse(response.body)
 	# @data = inner["congress"]
-	@results = data["results"][0]["members"]
+	@senatorMembers = data["results"][0]["members"]
 
+  end
+
+  def house
+	uri = URI.parse("https://api.propublica.org/congress/v1/115/house/members.json")
+	request = Net::HTTP::Get.new(uri)
+	request["X-Api-Key"] = "SpzjlPZlkMlPKKGCLQS1OqZtCN96lPl7sszOTKra"
+
+	req_options = {
+	  use_ssl: uri.scheme == "https",
+	}
+
+	response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+	  http.request(request)
+	end
+	data = JSON.parse(response.body)
+	# @data = inner["congress"]
+	@houseMembers = data["results"][0]["members"]
 
 
   end
 
+  def getSenator
+  	getSenator = Senator.all
+  	puts getSenator
+
+
+  end
 
   def about
   end

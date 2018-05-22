@@ -11,5 +11,7 @@ Rails.application.routes.draw do
 	get "about" => "pages#about"
 	get "contact" => "pages#contactus"
 	get "senator" => "propublica#senator"
+	get "house" => "propublica#house"
+	get "getSenator" => "propublica#getSenator"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
