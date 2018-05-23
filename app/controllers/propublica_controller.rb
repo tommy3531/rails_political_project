@@ -45,8 +45,6 @@ class PropublicaController < ApplicationController
   def getSenator
   	getSenator = Senator.all
   	puts getSenator
-
-
   end
 
   def about
