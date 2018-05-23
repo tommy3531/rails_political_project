@@ -159,22 +159,25 @@ section .section-title {
                         <div class="backside">
                             <div class="card">
                                 <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                    <h4 class="card-title">Party: <%= senator["party"] %></h4>
+                                    <p class="card-text">
+                                        <h6>Missed Votes: <%= senator["missed_votes_pct"] %>
+                                        <h6>Party Vote: <%= senator["votes_with_party_pct"] %>
+                                    </p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.facebook.com/<%= senator["facebook_account"] %>">
                                                 <i class="fa fa-facebook"></i>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://twitter.com/<%= senator["twitter_account"] %>">
                                                 <i class="fa fa-twitter"></i>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-skype"></i>
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://youtube.com/<%= senator["youtube_account"] %>">
+                                                <i class="fa fa-youtube"></i>
                                             </a>
                                         </li>
                                         <li class="list-inline-item">
