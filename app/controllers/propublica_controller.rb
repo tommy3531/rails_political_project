@@ -43,8 +43,7 @@ class PropublicaController < ApplicationController
   end
 
   def getSenator
-  	getSenator = Senator.all
-  	puts getSenator
+
   end
 
   def about
