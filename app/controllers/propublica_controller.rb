@@ -42,8 +42,8 @@ class PropublicaController < ApplicationController
 
   end
 
-  def getSenator
-
+  def detail()
+  	@id = params[:id]
   end
 
   def about
