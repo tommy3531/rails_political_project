@@ -43,7 +43,20 @@ class PropublicaController < ApplicationController
   end
 
   def detail()
-  	@id = params[:id]
+  	id = params[:id]
+  	uri = URI.parse("https://api.propublica.org/congress/v1/members/#{id}.json")
+	request = Net::HTTP::Get.new(uri)
+	request["X-Api-Key"] = "SpzjlPZlkMlPKKGCLQS1OqZtCN96lPl7sszOTKra"
+
+	req_options = {
+	  use_ssl: uri.scheme == "https",
+	}
+
+	response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+	  http.request(request)
+	end
+	data = JSON.parse(response.body)
+	@id = data
   end
 
   def about
