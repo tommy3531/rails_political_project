@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 	get "senator" => "propublica#senator"
 	get "house" => "propublica#house"
 	get "getSenator" => "propublica#getSenator"
-	get 'detail/:id' => 'propublica#detail'
+	get "detail/:id" => "propublica#detail"
+	get "getAll" => "propublica#getAll"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

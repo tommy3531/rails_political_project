@@ -19,8 +19,22 @@ class PropublicaController < ApplicationController
 
 	data = JSON.parse(response.body)
 	# @data = inner["congress"]
-	@senatorMembers = data["results"][0]["members"]
+	results = data["results"]
+	results.each do |result|
+		result["members"].each do |senator|
+			pid = senator["id"]
+			firstname = senator["first_name"]
+			lastname = senator["last_name"]
+			fb = senator["facebook_account"]
+			politican = Politican.new(member_id: 
+				pid, first_name: firstname, last_name: lastname, facebook_account: fb)
+			politican.save
+		end
+	end
+  end
 
+  def getAll
+  	@d = Politican.all
   end
 
   def house

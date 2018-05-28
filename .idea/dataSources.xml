@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails rails_political_project: production" uuid="b58417ea-0312-432a-85a7-4cd8ab3242ff">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:rails_political_project_production</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails rails_political_project: development" uuid="b67a5843-2556-43be-ad12-1d60d53912f4">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:rails_political_project_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails rails_political_project: cucumber" uuid="ca48501c-c7a0-4cb4-86d1-c98805ba4240">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:rails_political_project_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails rails_political_project: test" uuid="0aa2fe0c-0dfa-405e-9fa3-38aa4d651d69">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:rails_political_project_test</jdbc-url>
+    </data-source>
+  </component>
+</project>
