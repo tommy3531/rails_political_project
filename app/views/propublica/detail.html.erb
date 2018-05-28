@@ -1,2 +1,28 @@
 <h1>Hello detail</h1>
-<%= @id %>
+<h1>Detail</h1>
+<% @details.each do |detail| %>
+	<%= detail["member_id"] %>
+<% end %>
+<h1>Roles</h1>
+<% @details[0]["roles"].each do |detail| %>
+	<%= detail["congress"] %>
+	<%= detail["code"] %>
+	<%= detail["api_uri"] %>
+	<%= detail["side"] %>
+	<%= detail["title"] %>
+	<%= detail["rank_in_party"] %>
+	<%= detail["begin_date"] %>
+	<%= detail["end_date"] %>
+<% end %>
+<h1>SubCommittees</h1>
+<% @details[0]["roles"][0]["subcommittees"].each do |sub| %>
+	<%= sub["name"] %>
+	<%= sub["code"] %>
+	<%= sub["parent_committee_id"] %>
+	<%= sub["api_uri"] %>
+	<%= sub["side"] %>
+	<%= sub["title"] %>
+	<%= sub["rank_in_party"] %>
+	<%= sub["begin_date"] %>
+	<%= sub["end_date"] %>
+<% end %>

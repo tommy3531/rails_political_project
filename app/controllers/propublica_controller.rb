@@ -56,7 +56,7 @@ class PropublicaController < ApplicationController
 	  http.request(request)
 	end
 	data = JSON.parse(response.body)
-	@id = data
+	@details = data["results"]
   end
 
   def about
