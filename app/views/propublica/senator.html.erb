@@ -161,8 +161,12 @@ section .section-title {
                                 <div class="card-body text-center mt-4">
                                     <h4 class="card-title">Party: <%= senator["party"] %></h4>
                                     <p class="card-text">
-                                        <h6>Missed Votes: <%= senator["missed_votes_pct"] %>
-                                        <h6>Party Vote: <%= senator["votes_with_party_pct"] %>
+                                        <h6>Missed Votes: <%= senator["missed_votes_pct"] %></h6>
+                                        <h6>Party Vote: <%= senator["votes_with_party_pct"] %></h6>
+                                        <a href="/detail/<%= senator['id'] %>">Detail</a>
+
+
+
                                     </p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
