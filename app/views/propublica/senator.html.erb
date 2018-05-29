@@ -128,7 +128,74 @@ section .section-title {
     border-radius: 50%;
 }
 </style>
+<!-- Team -->
+<section id="team" class="pb-5">
+    <div class="container">
+        <h5 class="section-title h1">List of Senators 115t/h5>
+        <div class="row">
+            <!-- Team member -->
+            <% @d.each do |d| %>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart=his.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
 
-<% @d.each do |d| %>
-    <%= d.member_id %>
-<% end %>
+                                <div class="card-bodyext-center">
+                                    <p><img class="mg-fluid" src="https://theunitedstates.io/images/congress/225x275/<%= senator["id"] %>.jpg" alt="card image"/p>
+                                    <h4 class="card-title">
+                                      <%= d["id"] %>
+                                      <%= d["first_name"] %>
+                                      <%= d["last_name"] %>
+                                  </h4>
+                                    <p class="card-text">
+                                    <a href="#" class="btntn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-bodyext-center mt-4">
+                                    <h4 class="card-title"arty: <%= d["party"] %></h4>
+                                    <p class="card-text">
+                                        <h6>Missed Votes: <%= d["missed_votes_pct"] %></h6>
+                                        <h6>Party Vote: <%= d["votes_with_party_pct"] %></h6>
+                                        <a href="/detail/<%= d['id'] %>">Detail</a>
+
+
+
+                                    </p>
+                                    <ul class="list-inline
+                                        <li class=ist-inline-item">
+                                            <a class=ocial-icon text-xs-center" target="_blank" href="https:/ww.facebook.com/<%= senator["facebook_account"] %>">
+                                                <i class=a fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class=ist-inline-item">
+                                            <a class=ocial-icon text-xs-center" target="_blank" href="https:/witter.com/<%= senator["twitter_account"] %>">
+                                                <i class=a fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class=ist-inline-item">
+                                            <a class=ocial-icon text-xs-center" target="_blank" href="https:/outube.com/<%= senator["youtube_account"] %>">
+                                                <i class=a fa-youtube"></i>
+                                            </a>
+                                        </li>
+                                        <li class=ist-inline-item">
+                                            <a class=ocial-icon text-xs-center" target="_blank" href="#">
+                                                <i class=a fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+            <!-- ./Team member -->
+        </div>
+    </div>
+</section>
+<!-- Team --> 
