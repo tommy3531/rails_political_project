@@ -54,10 +54,6 @@ class PropublicaController < ApplicationController
 	end
   end
 
-  def getAll
-  	@d = Politican.all
-  end
-
   def house
 	uri = URI.parse("https://api.propublica.org/congress/v1/115/house/members.json")
 	request = Net::HTTP::Get.new(uri)
